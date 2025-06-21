@@ -32,11 +32,45 @@ app.get('/item', async (req,res) => {
 	res.json(itens);
 });
 
-app.post('/item', async (req, res) => {
-	const {nome, imagem, nomeCientifico, origem, descricao} = req.body;
-	if(!nome || !imagem || !nomeCientifico || !origem || !descricao) return res.status(400).json({erro: "nome e imagem obrigatorios"});
+app.get('/item/:id', async (req, res) => {
+	const id = Number(req.params.id);
+	const itens = await lerDados();      // <– data.json deve ser um ARRAY direto
+	const item  = itens.find(p => p.id === id);
+  
+	if (!item) return res.status(404).json({ erro: 'Item não encontrado' });
+	res.json(item);
+  });
 
-	const novoItem = { id: Date.now(), nome, imagem, nomeCientifico, origem, descricao };
+app.get('/item/:id', async (req, res) => {
+	const id = parseInt(req.params.id);
+	const itens = await lerDados();
+	const item = itens.find(item => item.id === id);
+  
+	if (!item) {
+	  return res.status(404).json({ erro: 'Item não encontrado' });
+	}
+  
+	res.json(item);
+  });
+
+app.put('/item/:id', async (req, res) => {
+	const id = parseInt(req.params.id);
+	let itens = await lerDados();
+  
+	const index = itens.findIndex(item => item.id === id);
+	if (index === -1) return res.status(404).json({ erro: 'Item não encontrado' });
+  
+	itens[index] = { ...itens[index], ...req.body, id }; // preserva o ID original
+  
+	await salvarDados(itens);
+	res.status(200).json(itens[index]);
+  });
+
+app.post('/item', async (req, res) => {
+	const {nome, imagem, nomeCientifico, origem, descricao, propagacao, exposicao, rega} = req.body;
+	if(!nome || !imagem || !nomeCientifico || !origem || !descricao || !propagacao || !exposicao || !rega) return res.status(400).json({erro: "nome e imagem obrigatorios"});
+
+	const novoItem = { id: Date.now(), nome, imagem, nomeCientifico, origem, descricao, propagacao, exposicao, rega };
 	const itens = await lerDados(); // garante que vai ler os dados reais do arquivo
 	itens.push(novoItem);
 	await salvarDados(itens);

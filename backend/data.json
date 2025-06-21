@@ -1,26 +1,94 @@
 [
   {
-    "id": 1750185019118,
-    "nome": "sssssssssssssss",
-    "imagem": "ssssssssssssssssss",
-    "nomeCientifico": "sssssssssssssssss",
-    "origem": "ssssssssssssssssssss",
-    "descricao": "ssssssssssssssssssssssssss"
+    "id": 0,
+    "nome": "Rosa de Pedra",
+    "nomeCientifico": "Echeveria elegans",
+    "origem": "México",
+    "descricao": "Forma rosetas simétricas de folhas azul-esverdeadas com toque ceroso. Muito usada em arranjos e vasos.",
+    "propagacao": "Por folhas ou divisão de mudas",
+    "sol": "Pleno sol ou meia sombra",
+    "rega": "1x por semana no verão, 15 dias no inverno",
+    "imagem": "https://superuniversodasplantas.com.br/wp-content/uploads/2023/08/d8e6fc32631590f01e251d1c13648a36-jpg.webp"
   },
   {
-    "id": 1750185035014,
-    "nome": "zzzzzzzzzzzzzzzzzzzzzzz",
-    "imagem": "zzzzzzzzzzzzzzzzzz",
-    "nomeCientifico": "zzzzzzzzzzzzzzzzzz",
-    "origem": "zzzzzzzzzzzzzzzzzz",
-    "descricao": "zzzzzzzzzzzzzzzzzzzzzzzzz"
+    "id": 2,
+    "nome": "Orelha de Shrek",
+    "nomeCientifico": "Crassula ovata 'Gollum'",
+    "origem": "África do Sul",
+    "descricao": "Folhas cilíndricas com extremidades curvas, lembrando o personagem Shrek.",
+    "propagacao": "Por folhas ou galhos",
+    "sol": "Sol pleno ou luz indireta",
+    "rega": "Semanal, evitando encharcar",
+    "imagem": "https://www.plantasonya.com.br/wp-content/img/orelha-de-sherek.jpg"
   },
   {
-    "id": 1750186129049,
-    "nome": "1111111111111",
-    "imagem": "1111111111111111",
-    "nomeCientifico": "1111111111111111",
-    "origem": "11111111111111111",
-    "descricao": "111111111111111111"
+    "id": 3,
+    "nome": "Colar de Pérolas",
+    "nomeCientifico": "Senecio rowleyanus",
+    "origem": "África do Sul",
+    "descricao": "Suculenta pendente com folhas arredondadas como pequenas bolinhas verdes.",
+    "propagacao": "Por estacas de caule",
+    "sol": "Luz indireta forte",
+    "rega": "1x por semana"
+  },
+  {
+    "id": 4,
+    "nome": "Dedinho-de-moça",
+    "nomeCientifico": "Sedum morganianum",
+    "origem": "México e Honduras",
+    "descricao": "Caule pendente com folhas carnudas que caem com facilidade. Muito usada em vasos suspensos.",
+    "propagacao": "Por folhas ou galhos",
+    "sol": "Meia sombra",
+    "rega": "Moderada, 1x por semana"
+  },
+  {
+    "id": 5,
+    "nome": "Orelha de Elefante",
+    "nomeCientifico": "Kalanchoe beharensis",
+    "origem": "Madagáscar",
+    "descricao": "Folhas grandes, aveludadas e triangulares. Pode crescer bastante com o tempo.",
+    "propagacao": "Por folhas ou galhos",
+    "sol": "Sol pleno ou luz difusa",
+    "rega": "Espaçada, apenas quando o solo estiver seco"
+  },
+  {
+    "id": 6,
+    "nome": "Fantasma",
+    "nomeCientifico": "Graptopetalum paraguayense",
+    "origem": "México",
+    "descricao": "Folhas acinzentadas com tons rosados. Fica linda em jardins de pedra.",
+    "propagacao": "Por folhas com facilidade",
+    "sol": "Sol direto ou meia sombra",
+    "rega": "1x por semana"
+  },
+  {
+    "id": 7,
+    "nome": "Cacto Rabo de Macaco",
+    "nomeCientifico": "Hildewintera colademononis",
+    "origem": "Bolívia",
+    "descricao": "Cacto pendente coberto por pelos finos e brancos. Produz flores vibrantes.",
+    "propagacao": "Por estacas",
+    "sol": "Sol direto parcial",
+    "rega": "Espaçada, solo deve secar bem"
+  },
+  {
+    "id": 8,
+    "nome": "Jade Mini",
+    "nomeCientifico": "Crassula ovata 'Minima'",
+    "origem": "África do Sul",
+    "descricao": "Versão compacta da planta Jade, ideal para pequenos vasos.",
+    "propagacao": "Por galhos ou folhas",
+    "sol": "Sol pleno ou luz forte",
+    "rega": "1x por semana ou menos"
+  },
+  {
+    "id": 9,
+    "nome": "Cacto Bola Dourada",
+    "nomeCientifico": "Echinocactus grusonii",
+    "origem": "México",
+    "descricao": "Cacto esférico com espinhos amarelos. Muito decorativo.",
+    "propagacao": "Por sementes (demorado) ou divisão de mudas",
+    "sol": "Sol pleno",
+    "rega": "A cada 10-15 dias"
   }
 ]
