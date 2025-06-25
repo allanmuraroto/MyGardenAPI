@@ -11,17 +11,6 @@
     "imagem": "https://superuniversodasplantas.com.br/wp-content/uploads/2023/08/d8e6fc32631590f01e251d1c13648a36-jpg.webp"
   },
   {
-    "id": 2,
-    "nome": "Orelha de Shrek",
-    "nomeCientifico": "Crassula ovata 'Gollum'",
-    "origem": "África do Sul",
-    "descricao": "Folhas cilíndricas com extremidades curvas, lembrando o personagem Shrek.",
-    "propagacao": "Por folhas ou galhos",
-    "sol": "Sol pleno ou luz indireta",
-    "rega": "Semanal, evitando encharcar",
-    "imagem": "https://www.plantasonya.com.br/wp-content/img/orelha-de-sherek.jpg"
-  },
-  {
     "id": 3,
     "nome": "Colar de Pérolas",
     "nomeCientifico": "Senecio rowleyanus",
@@ -90,5 +79,71 @@
     "propagacao": "Por sementes (demorado) ou divisão de mudas",
     "sol": "Sol pleno",
     "rega": "A cada 10-15 dias"
+  },
+  {
+    "nome": "Echeveria Perle von Nürnberg",
+    "urlDaImagem": "",
+    "nomeCientifico": "teste",
+    "origem": "deserto",
+    "descricao": "Folhas roxas com tons rosados.",
+    "propagacao": "https://meujardim.com/echeveria.jpg",
+    "exposicao": "Sol indireto",
+    "rega": "",
+    "id": 10
+  },
+  {
+    "id": 1750816574551,
+    "nome": "Echeveria Perle von Nürnberg",
+    "imagem": "sssssssssssss",
+    "nomeCientifico": "teste",
+    "origem": "deserto",
+    "descricao": "Folhas roxas com tons rosados.",
+    "propagacao": "https://meujardim.com/echeveria.jpg",
+    "exposicao": "Sol indireto",
+    "rega": "sssssssssssss"
+  },
+  {
+    "id": 1750816583276,
+    "nome": "Echeveria Perle von Nürnberg",
+    "imagem": "sssssssssssss",
+    "nomeCientifico": "teste",
+    "origem": "deserto",
+    "descricao": "Folhas roxas com tons rosados.",
+    "propagacao": "https://meujardim.com/echeveria.jpg",
+    "exposicao": "Sol indireto",
+    "rega": "sssssssssssss"
+  },
+  {
+    "id": 1750816584435,
+    "nome": "Echeveria Perle von Nürnberg",
+    "imagem": "sssssssssssss",
+    "nomeCientifico": "teste",
+    "origem": "deserto",
+    "descricao": "Folhas roxas com tons rosados.",
+    "propagacao": "https://meujardim.com/echeveria.jpg",
+    "exposicao": "Sol indireto",
+    "rega": "sssssssssssss"
+  },
+  {
+    "id": 1750816586311,
+    "nome": "Echeveria Perle von Nürnberg",
+    "imagem": "sssssssssssss",
+    "nomeCientifico": "teste",
+    "origem": "deserto",
+    "descricao": "Folhas roxas com tons rosados.",
+    "propagacao": "https://meujardim.com/echeveria.jpg",
+    "exposicao": "Sol indireto",
+    "rega": "sssssssssssss"
+  },
+  {
+    "id": 1750816587541,
+    "nome": "Echeveria Perle von Nürnberg",
+    "imagem": "sssssssssssss",
+    "nomeCientifico": "teste",
+    "origem": "deserto",
+    "descricao": "Folhas roxas com tons rosados.",
+    "propagacao": "https://meujardim.com/echeveria.jpg",
+    "exposicao": "Sol indireto",
+    "rega": "sssssssssssss"
   }
 ]

@@ -19,6 +19,7 @@ function ListaPlantas() {
   useEffect(() => {
     fetchItem();
   }, []);
+  
 
   const fetchItem = async () => {
     const res = await fetch('http://localhost:3001/item');
@@ -46,9 +47,27 @@ function ListaPlantas() {
   };
 
   const removerItem = async (id) => {
-    await fetch(`http://localhost:3001/item/${id}`, { method: 'DELETE' });
-    fetchItem();
+    try {
+      const resposta = await fetch(`http://localhost:3001/item/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'x-api-key': '1234567'
+        }
+      });
+  
+      if (!resposta.ok) {
+        const erro = await resposta.json();
+        console.error('Erro ao deletar:', erro);
+        return;
+      }
+  
+      console.log('Item deletado com sucesso');
+      fetchItem(); // atualiza a lista
+    } catch (err) {
+      console.error('Erro na conexão com o backend:', err);
+    }
   };
+  
 
   const editarItem = (item) => {
     setEditandoId(item.id);
