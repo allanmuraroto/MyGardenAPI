@@ -37,9 +37,12 @@ const checkAuth = (req, res, next) => {
 	}
 	next();
   };
-  
+
+
+app.use(cors());  
+
 app.use(checkAuth);
-app.use(cors());
+
 app.use(express.json());
 
 let idAtual = 1;
@@ -59,23 +62,32 @@ app.get('/item/:id', async (req, res) => {
 	if (!item) return res.status(404).json({ erro: 'Item não encontrado' });
 	res.json(item);
   });
+app.post('/item', async (req, res) => {
+  const {nome, imagem, nomeCientifico, origem, descricao, propagacao, exposicao, rega} = req.body;
+  
+  if(!nome || !imagem || !nomeCientifico || !origem || !descricao || !propagacao || !exposicao || !rega) {
+    return res.status(400).json({erro: "Todos os campos são obrigatórios"});
+  }
 
-/* app.post('/item', (req, res) => {
-	const nova = req.body;
+  const itens = await lerDados();  
+  const novoItem = {
+    id: Date.now(),
+    nome,
+    imagem,
+    nomeCientifico,
+    origem,
+    descricao,
+    propagacao,
+    exposicao,
+    rega
+  };
 
-	// Carrega os dados atuais
-	let suculentas = require('./data.json');
+  itens.push(novoItem);
+  await salvarDados(itens);
 
-	// Define ID automático
-	nova.id = suculentas.length ? suculentas[suculentas.length - 1].id + 1 : 1;
+  res.status(201).json(novoItem);
+});
 
-	// Adiciona e salva
-	suculentas.push(nova);
-	fs.writeFileSync('./data.json', JSON.stringify(suculentas, null, 2));
-	
-
-	res.status(201).json({ message: 'Suculenta cadastrada com sucesso!', nova });
-}); */
 
 app.put('/item/:id', async (req, res) => {
 	const id = parseInt(req.params.id);

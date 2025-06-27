@@ -27,24 +27,53 @@ function ListaPlantas() {
     setItem(data);
   };
 
-  const adicionarItem = async () => {
-    if (!nome || !imagem) return alert('Preencha todos os campos');
-    const dados = { nome, imagem, nomeCientifico, descricao, origem, propagacao, exposicao, rega };
+ const adicionarItem = async () => {
+  if (!nome || !imagem) {
+    return alert('Preencha todos os campos');
+  }
+
+  const dados = { nome, imagem, nomeCientifico, descricao, origem, propagacao, exposicao, rega };
+
+  try {
     if (editandoId !== null) {
+      // Atualizar item existente
       await fetch(`http://localhost:3001/item/${editandoId}`, {
-        method: 'PUT', headers: { 'Content-Type': 'application/json' },
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': '1234567'
+        },
         body: JSON.stringify(dados),
       });
     } else {
+      // Cadastrar novo item
       await fetch('http://localhost:3001/item', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': '1234567'
+        },
         body: JSON.stringify(dados),
       });
     }
-    setNome(''); setImagem(''); setNomeCientifico(''); setDescricao('');
-    setOrigem(''); setPropagacao(''); setExposicao(''); setRega('');
-    setEditandoId(null); fetchItem();
-  };
+
+    // Limpar o formulário
+    setNome('');
+    setImagem('');
+    setNomeCientifico('');
+    setDescricao('');
+    setOrigem('');
+    setPropagacao('');
+    setExposicao('');
+    setRega('');
+    setEditandoId(null);
+    fetchItem();
+
+  } catch (error) {
+    console.error('Erro ao enviar dados:', error);
+    alert('Erro ao salvar a suculenta. Verifique a conexão com o servidor.');
+  }
+};
 
   const removerItem = async (id) => {
     try {
